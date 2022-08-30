@@ -34,12 +34,11 @@ class Visit(models.Model):
         )
 
     def get_duration(self):
-        if self.leaved_at == None:
-            delta = localtime() - localtime(self.entered_at)
-            return delta.total_seconds()
-        else:
+        if self.leaved_at:
             delta = localtime(self.leaved_at) - localtime(self.entered_at)
-            return delta.total_seconds()
+        else:
+            delta = localtime() - localtime(self.entered_at)
+        return delta.total_seconds()
 
     def format_duration(self):
         delta_format = time.strftime("%H:%M", time.gmtime(Visit.get_duration(self)))
