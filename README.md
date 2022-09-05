@@ -11,9 +11,9 @@ Django 3.2
 ```
 pip install -r requirements.txt
 ```
-- В папке с файлом main.py выполните команду:
+- В папке с файлом manage.py выполните команду:
 ```
-python3 main.py runserver
+python3 manage.py runserver
 ```
 - Пример запуска:
 ![img_2.png](img_2.png)
