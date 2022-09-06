@@ -11,11 +11,23 @@ Django 3.2
 ```
 pip install -r requirements.txt
 ```
+- Добавьте в папку с проектом файл ".env" и внесите следующие данные:
+```
+DATABASE_ENGINE='движок базы данных'
+DATABASE_HOST='хост'
+DATABASE_PORT=='порт'
+DATABASE_NAME='имя базы'
+DATABASE_PASSWORD='пароль'
+DATABASE_USER='имя пользователя'
+SECRET_KEY='секретный ключ'
+```    
 - В папке с файлом manage.py выполните команду:
 ```
 python3 manage.py runserver
 ```
 - Пример запуска:
 ![img_2.png](img_2.png)
+
+
 ### Авторы
 dvmn.org и подопытный
